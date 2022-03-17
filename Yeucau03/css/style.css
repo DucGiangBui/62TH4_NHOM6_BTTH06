@@ -1,0 +1,21 @@
+body{
+    background-color: black;
+}
+h1{
+    color: #fff;
+    text-align: center;
+    margin-top: 1;
+}
+
+.clock{
+    color: aqua;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 60px;
+    border: 1px dashed rgb(255, 255, 255);
+    width: 1000;
+    padding: 20px;
+    border-radius: 30px;
+}
