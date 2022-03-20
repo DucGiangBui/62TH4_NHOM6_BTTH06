@@ -13,8 +13,22 @@ function startTime() {
     let img = stringToImage(string);
     document.getElementById("myClock").innerHTML = "<br>" + img;
     let t = setTimeout(startTime, 1000);
-  }
   
+  var greeting = document.querySelector("h4");
+    if (0<=h && h<12){
+      greeting.innerHTML = "Chào buổi sáng";
+      greeting.style.fontSize = "40px";
+    }else if (12<=h && h<17){
+      greeting.innerHTML = "Chào buổi chiều";
+      greeting.style.color = "red";
+      greeting.style.fontSize = "50px";
+    }else if (17<=h && h<23){
+      greeting.innerHTML = "Chào buổi tối";
+      greeting.style.fontSize = "60px";
+      greeting.style.color = "black"; 
+    }
+  }
+
   function checkTime(i) {
     if (i < 10) {
       i = "0" + i;

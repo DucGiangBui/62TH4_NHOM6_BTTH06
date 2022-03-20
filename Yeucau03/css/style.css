@@ -13,12 +13,10 @@ body{
     width: max-content;
 }
 #sayGreeting{
-    background-color: black;
-    padding-top: 70px;
-    text-align: center;  
+    text-align: center;
+    border: 2px solid black;
+    color: black;
 }
 #imgclock img{
     height: 50px;
-
 }
-
