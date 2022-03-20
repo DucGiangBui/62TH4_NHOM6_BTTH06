@@ -1,0 +1,24 @@
+body{
+    font-family: 'Orbitron', sans-serif;
+    color: #e44646;
+    font-weight: 700;
+    font-size: 60px;
+}
+#container{
+    display: flex;
+    justify-content:center;
+}
+#myClock{
+    background-color: black;
+    width: max-content;
+}
+#sayGreeting{
+    background-color: black;
+    padding-top: 70px;
+    text-align: center;  
+}
+#imgclock img{
+    height: 50px;
+
+}
+
