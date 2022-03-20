@@ -21,6 +21,7 @@ function sapXep() {
     });
     document.getElementById("output").innerHTML = arr;
   }
+}
   function insertNumber() {
     number = document.getElementById("number").value;
     index = document.getElementById("index").value-1;
@@ -30,5 +31,5 @@ function sapXep() {
     arr.splice(index, 0, number);
     document.getElementById("output").innerHTML = arr.join(" , ");
   }
-}
+
 
