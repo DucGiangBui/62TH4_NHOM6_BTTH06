@@ -1,21 +1,24 @@
 body{
-    background-color: black;
+    font-family: 'Orbitron', sans-serif;
+    color: #e44646;
+    font-weight: 700;
+    font-size: 60px;
 }
-h1{
-    color: #fff;
-    text-align: center;
-    margin-top: 1;
+#container{
+    display: flex;
+    justify-content:center;
+}
+#myClock{
+    background-color: black;
+    width: max-content;
+}
+#sayGreeting{
+    background-color: black;
+    padding-top: 70px;
+    text-align: center;  
+}
+#imgclock img{
+    height: 50px;
+
 }
 
-.clock{
-    color: aqua;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    font-size: 60px;
-    border: 1px dashed rgb(255, 255, 255);
-    width: 1000;
-    padding: 20px;
-    border-radius: 30px;
-}

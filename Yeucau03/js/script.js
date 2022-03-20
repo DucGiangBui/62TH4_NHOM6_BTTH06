@@ -1,28 +1,46 @@
-function showTime(){
-    
-    const color = document.querySelector(".color");
-    var date = new Date();
-    var h = date.getHours();
-    var m = date.getMinutes();
-    var s = date.getSeconds ();
-    var session = "AM";
-    
-    if(h==0){
-        h=12;
+function startTime() {
+    let today = new Date();
+  
+    let h = today.getHours();
+    let m = today.getMinutes();
+    let s = today.getSeconds();
+  
+    h = checkTime(h);
+    m = checkTime(m);
+    s = checkTime(s);
+  
+    let string = h + ":" + m + ":" + s;
+    let img = stringToImage(string);
+    document.getElementById("myClock").innerHTML = "<br>" + img;
+    let t = setTimeout(startTime, 1000);
+  }
+  
+  function checkTime(i) {
+    if (i < 10) {
+      i = "0" + i;
     }
-    if(h>12){
-        h=h-12;
-        session="PM";
+    return i;
+  }
+  
+  function stringToImage(s) {
+    let temp = "";
+    for (var i = 0; i < s.length; i++) {
+      temp = temp + "<img id='imgclock' src='" + img[s[i]] + "' style='height: 60px; width: 50px' />";
     }
-
-    h=(h<10) ? "0" + h:h;
-    m=(m<10) ? "0" + m:m;
-    s=(s<10) ? "0" + s:s;
-   // hh:mm:ss AM/PM
-    var time = h + ":" + m + ":" + s + " " + session;
-    document.getElementById ("MyClock").innerText=time;
-    document.getElementById ("MyClock").textContent=time;
-    setTimeout (showTime, 1000);
-    
-}
-showTime()
+    return temp;
+  }
+  
+  var img = {
+    "1": "icon/1.gif",
+    "2": "icon/2.gif",
+    "3": "icon/3.gif",
+    "4": "icon/4.gif",
+    "5": "icon/5.gif",
+    "6": "icon/6.gif",
+    "7": "icon/7.gif",
+    "8": "icon/8.gif",
+    "9": "icon/9.gif",
+    "0": "icon/0.gif",
+    ":": "icon/haicham.gif",
+  };
+  
